@@ -1,0 +1,131 @@
+%%%% INTRODUCTION
+%% \section{Overview} % seems more appropriate than Introduction, at this point
+%% \subsection{Background}
+%% \subsection{Problem Definition and Proposed Solution}
+%% \subsection{Delivery}
+%% \subsection{Solution Specifications}
+%% \subsection{Deployment Phases}
+%% \subsection{Broader Engagement}
+222
+While cloud computing has been enourmously successful for internet
+services, its potential is much greater.  It could support interactive
+supercomputing applications that are not possible today. For example,
+consider a mathematica like environment~\cite{julia} that spins up
+thousands of nodes for a second to allow an engineer to work
+interactively with massive problems.  Or, a medical imaging
+application that allows a clinician to perform motion correction on
+MRI images and interact with them in real time~\cite{ebbrt}.  It could
+enable new cyber-physical applicatons, where the rich compute-intesive
+applications interact with massive data sets and in real time with the
+physical world.  It could provide users with strong and verifyable
+security gaurantees, allowing broad adoption by even the most security
+sensitive segments of society.  It could, host massive data sets, and
+enable computationally intensive Big Data solutions to be used by
+anyone.  It could be orders of magnitude less expensive and be an
+integral part of a smart power grid.
+
+To achieve this, innovation will be required at all levels, including
+new OSes, new hypervisors, new middleware for different domains, new
+Big Data platforms, new distributed programing models, new storage technologies,
+new networking technologies, new accellerators, and new cloud 
+services.  It will require the innovation of a broad community of
+researchers and industry, working together, building on each other's
+innovation, and competing with each other.
+
+Unfortunately, the current model of cloud computing limits many types
+of innovation to a small number of players.  The fundamental problem
+is that each cloud is stood up by a single provider who is responsible
+for all aspects of its implementation.  While researchers (and
+industry at large) can innovate on top of a cloud, only the provider
+can innovate in the cloud implementation.  Also, research on top of
+the cloud is, in many cases, limited by the underlying capabilities of
+the cloud.  For example, one can't explore real time use of a cloud if
+the cloud doesn't provide the required services.  Any examination of
+the top CISE conferences shows that most publications in innovating in
+cloud comes from researchers at a small number of large companies.
+
+We need a very different model of cloud if we are going to enable
+innovation by the research community.  A new testbed to enable
+research on cloud computing (Section~\ref{requirements}) must expose
+researchers to real problems and real workloads, must involve
+industry, and must have an architecture that enables researchers to
+focus on a problem, while being able to depend on and leverage a
+broader infrastructure to deploy and exercise their innovation.
+
+Our vision on how the cloud should evolve is as a marketplace or
+exchange, where many entities can simultaneously innovate at many
+different levels, and clients can select and compose the services
+provided by these different entities.  We call this model an Open
+Cloud eXchange (OCX).  Each provider of a service, or eXchange Service
+Provider (XSP), is responsible for developing and operating their own
+service and exposing sufficient information to allow the customer to
+select and interact with their service.  The OCX operator is
+responsible for shared networking, billing, data center operations,
+and operating the exchange services that allow the customer to select
+between XSPs.
+
+The OCX model would offer enourmous value for researchers.  A
+researcher can focus on their own service, not having to worry about
+all the other services needed to implement a full cloud.  A researcher
+can develop a new service by layering it on top of other existing
+services.  For example, they can build a new instance of a compute
+service by handling a few special cases, and forward all requests
+they don't want to handle to other services.  New services that
+provide entirely new functionality can be exposed alongside existing
+ones.  On the other hand, a researcher that wants to expose, for
+example, a new cloud service can install their service on bare
+computers, and then make it a part of overall service available to
+customers.
+
+This proposal describes a four-year project to develop the OCX Research
+Testbed (ORT).  This testbed will be the first instance of an OCX, and
+will be designed to empower the research community to actively engage
+in research on and in cloud computing.  At the same time, the ORT will
+have a strong partnership with industry, providing it: 1)~a model for
+long-term self sustainability, 2)~a path for the innovation developed in
+the cloud to be visible to and adopted by industry, and 3)~a mechanism
+to ensure that the research is informed by the very rapid changes
+going on in the commercial cloud sectors.  
+
+Section~\ref{requirements} describes the requirements that a cloud
+testbed should meet and the research that it should enable and
+Section~\ref{sec:arch} describes the OCX model on which we are basing
+the ORT.
+
+Section~\ref{sec:realization} describes our strategy for realizing the
+testbed based on this model.  The ORT will be a single distributed
+cloud federating capacity at two sites: one in Boston region and one
+in Tennessee.  Both of these sites will leverage major NSF, state,
+academic and industry investments. Both of these sites are a hub for a
+community of universities that are critical to the testbed.  Also, we
+will leverage in this effort private clouds and industry, provide us a
+path forward to achieving the aggressive goals in the time frame and
+budget of this proposal.
+
+Section~\ref{sec:projects} describes specific projects that include
+those needed to create an operational testbed, specific technologies
+that will be developed or enhanced to expand the role of the testbed,
+and domain-specific projects to enable specific research communities.
+
+Section~\ref{sec:inf} describes the initial infrastructure on which
+the first phase development will be pursued, and some of the other
+infrastructure available at the facilities on which we are standing up
+the testbed that we plan to exploit for the project.  The project will
+leverage the investments that have been made in a number of clouds and
+testbeds as discussed in Section~\ref{sec:testbeds}.
+
+A critical part of developing a testbed is to engage a broad
+community.  Our plans for doing so are described in
+Section~\ref{sec:com}. We discuss in Section~\ref{sec:req} how the ORT
+will meet the challenges discussed above.  Finally,
+Section~\ref{sec:pm} discusses how the project will be managed. 
+
+
+%% \subsection{Requirements for a Testbed}
+%% \label{requirements}
+%% \input{project_description/challenges}
+%% \subsection{Proposal Overview}
+%% \input{project_description/overview}
+
+
+%%  LocalWords:  eXchange OCX XSP XSPs Testbed ORT testbed
